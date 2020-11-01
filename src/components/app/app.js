@@ -8,6 +8,13 @@ import './app.css';
 
 
 const App = () => {
+    //имитация получения данных с сервера
+    const data = [
+        {label: 'Going to learn React', important: true, id:'sfsd'},
+        {label: 'That is so good', important: false, id:'sdgdf'},
+        {label: 'I need a break...', important: false, id:'cvbcc'}
+    ];
+
     return (
         <div className="app">
             <AppHeader/>
@@ -15,7 +22,7 @@ const App = () => {
                 <SearchPanel />
                 <PostStatusFilter />
             </div>
-            <PostList/>
+            <PostList posts={data}/>
             <PostAddForm/>
         </div>
         )
